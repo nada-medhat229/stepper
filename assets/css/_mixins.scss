@@ -1,0 +1,38 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin rounded($radius: 50%) {
+  border-radius: $radius;
+}
+
+@mixin transition($props: all, $time: 0.3s) {
+  transition: $props $time ease-in-out;
+}
+
+@mixin flex-align($gap: 0.5rem) {
+  display: flex;
+  align-items: center;
+  gap: $gap;
+}
+@mixin media($size) {
+  @media (max-width: #{$size}px) {
+    @content;
+  }
+}
+@mixin minmedia($size) {
+  @media (min-width: #{$size}px) {
+    @content;
+  }
+}
+@mixin margin-inline-start($value) {
+  [dir="ltr"] & {
+  margin-right: $value;
+  }
+  [dir="rtl"] & {
+   
+       margin-left: $value;
+  }
+}

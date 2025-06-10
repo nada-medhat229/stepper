@@ -1,0 +1,22 @@
+/*Thank you*/
+.thankContainer {
+  min-height: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+
+  .thankParent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+
+    .thankyou {
+      font-size: 22px;
+      font-weight: 700;
+      margin-top: 12px;
+    }
+  }
+}
