@@ -317,7 +317,7 @@ html {
   display: flex;
   flex-direction: row;
   border-radius: 14px;
-  padding: 12px 30px;
+  padding: 0 30px;
   background-color: #F4F9FD;
   margin-top: 20px;
   height: 100vh;
