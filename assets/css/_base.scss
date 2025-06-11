@@ -25,8 +25,31 @@ a {
 body,
 html {
   overflow-x: hidden;
+  line-height: 24px;
 }
 
+.form-select:focus,
+.form-control:focus {
+  box-shadow: none
+
+}
+.form-input,
+.input-group-text,
+.form-select,
+.form-control {
+  border-radius: 14px;
+  padding: 10px;
+  border: $main-border;
+}
+.input-group-text{
+  border-left: none;
+}
+.pass{
+  border-right: none;
+}
+.w-45{
+  width: 53%;
+}
 .formParentWrapper {
   display: flex;
   flex-direction: row;
@@ -36,83 +59,22 @@ html {
   margin-top: 20px;
   height: 90vh;
 }
+.formParentWrapper[data-step="5"] {
+  .rightSectionParent {
+    width: 100% !important;
+    margin: 0 !important;
 
+    .rightSectionWrapper {
+      width: 100% !important;
+    }
+  }
+}
 .logo {
   width: 50px;
   height: 50px;
   margin-bottom: 20px;
 }
 
-
-.personalInfo {
-  color: var(--coolGray);
-  font-size: 14px;
-  font-weight: 450;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.fieldParent input {
-  width: 100%;
-  padding-inline: 8px;
-  padding-block: 12px;
-  border-radius: 8px;
-  border: 1.5px solid var(--lightGray);
-  outline: none;
-  font-size: 14px;
-  font-weight: 600;
-  color: $primary;
-  cursor: pointer;
-}
-
-.fieldParent input:focus {
-  border: 1.5px solid var(--purplishBlue);
-}
-
-.fieldParent input::placeholder {
-  color: var(--coolGray);
-  font-size: 14px;
-  font-weight: 550;
-}
-
-.labelErrorParent {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 0.5rem;
-  align-items: center;
-}
-
-label {
-  font-weight: 500;
-  font-size: 14px !important;
-  color: $primary !important;
-}
-
-input[type=number] {
-  appearance: textfield;
-}
-
-.error {
-  display: none;
-  color: var(--strawberryRed);
-  font-weight: 600;
-}
-
-.showError {
-  display: block;
-  font-weight: 600;
-  font-size: 14px;
-}
-
-.borderError {
-  border: 1.875px solid var(--strawberryRed) !important;
-}
 
 .hide {
   display: none;
@@ -126,299 +88,3 @@ input[type=number] {
 .hideBtn {
   visibility: hidden;
 }
-
-.showPrice {
-  display: block;
-}
-
-
-.planParent {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 16px;
-  margin-top: 16px;
-}
-
-.plan {
-  padding: 16px;
-  border-radius: 8px;
-  background-color: $white;
-  cursor: pointer;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  min-height: 100px;
-  border: 1.875px solid var(--lightGray);
-  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 0px 0px;
-}
-
-.price {
-  font-weight: 500;
-  color: gray;
-}
-
-.plan img {
-  width: 32px;
-  height: 32px;
-}
-
-.planTitle {
-  font-weight: 700;
-  color: $primary;
-}
-
-.innerPlan {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.plan.border {
-  border: 1.875px solid var(--purplishBlue);
-  background-color: var(--magnolia);
-}
-
-
-.random {
-  font-size: 14px;
-  color: var(--coolGray);
-  font-weight: 500;
-}
-
-/* Check Box UI*/
-
-.planTypeParent {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 24px;
-  align-items: center;
-  margin-top: 16px;
-}
-
-.switchType {
-  color: var(--coolGray);
-  font-weight: 700;
-}
-
-.activeType {
-  color: $primary;
-}
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 48px;
-  height: 24px;
-}
-
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: $primary;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 16px;
-  width: 16px;
-  left: 4px;
-  bottom: 4px;
-  background-color: $white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input[type="checkbox"]:checked+.slider::before {
-  -webkit-transform: translateX(24px);
-  -ms-transform: translateX(24px);
-  transform: translateX(24px);
-}
-
-.slider.round {
-  border-radius: 16px;
-}
-
-.slider.round::before {
-  border-radius: 50%;
-}
-
-/* Check Boxes*/
-.checkBoxesParent {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.checkBoxContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px;
-  border-radius: 8px;
-  border: 1.875px solid var(--lightGray);
-  cursor: pointer;
-}
-
-.checkBoxInfo {
-  display: flex;
-  gap: 24px;
-  cursor: pointer;
-}
-
-.checkBoxInfo p {
-  margin: 0;
-  margin-block: 4px;
-  align-items: center;
-}
-
-.checkBoxContainer.cardBorder {
-  border: 1.875px solid var(--purplishBlue);
-  background-color: var(--alabaster);
-}
-
-.checkBoxInfo input[type="checkbox"] {
-  width: 20px;
-  height: 20px;
-  border-radius: 4px;
-  vertical-align: middle;
-  cursor: pointer;
-  accent-color: var(--purplishBlue);
-  margin-top: 8px;
-  border: 1.875px solid var(--lightGray) !important;
-}
-
-.addTitle {
-  font-weight: 700;
-  color: $primary;
-}
-
-.addOnPrice {
-  color: var(--purplishBlue);
-  font-weight: 600;
-}
-
-/* Summary  */
-
-.billingContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  border-radius: 8px;
-}
-
-.billingParent {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  padding: 24px;
-  background-color: var(--magnolia);
-  border-radius: 8px;
-}
-
-.planInfo {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1.875px solid var(--lightGray);
-  padding-bottom: 20px;
-}
-
-.planInfo p {
-  margin: 0;
-}
-
-.selectedPlan {
-  font-weight: 700;
-  font-size: 14px;
-  color: $primary;
-}
-
-.billingContainer {
-  margin-top: 16px;
-}
-
-.selectedPlanBill {
-  color: $primary;
-  font-weight: 700;
-  font-size: 14px;
-}
-
-.changeLink {
-  text-decoration: underline;
-  cursor: pointer;
-  color: var(--coolGray);
-  font-weight: 500;
-  padding-top: 4px;
-}
-
-.changeLink:hover {
-  color: var(--purplishBlue);
-}
-
-.ON {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.ON p {
-  margin: 0;
-}
-
-.totalBill {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 20px;
-  padding-top: 8px;
-}
-
-.planError {
-  color: var(--strawberryRed);
-  display: none;
-  font-weight: 700;
-  margin-bottom: -8px;
-}
-
-.dynamicData {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding-top: 16px;
-}
-
-.adTitle {
-  color: var(--coolGray);
-  font-weight: 500;
-  font-size: 14px;
-  margin-left: 4px;
-}
-
-.adPrice {
-  color: $primary;
-  font-weight: 500;
-  font-size: 14px;
-}
-
-.finalPrice {
-  color: var(--purplishBlue);
-  font-size: 20px;
-  font-weight: 700;
-}
-

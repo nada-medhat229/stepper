@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz:wght@400;500;700&display=swap"
     rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="./package/bootstrap.min.css">
   <link rel="stylesheet" href="/assets/css/style.css">
   <title>MultiStep Form</title>
@@ -58,32 +59,60 @@
                 <span class="spanstep">Step 1/4</span>
                 <h3 class="personal">Valid your phone </h3>
               </div>
-
-              <div class="form">
-                <div class="fieldParent">
-                  <div class="labelErrorParent">
-                    <label for="name">Name</label>
-                    <p class="error"></p>
+              <div class="text-start">
+                <!-- Mobile Number -->
+                <div class="my-3">
+                  <label for="phone" class="form-label mb-3">Mobile Number</label>
+                  <div class="d-flex gap-2 ">
+                    <select class="form-select" style="max-width: 75px;">
+                      <option selected>+1</option>
+                      <option>+91</option>
+                      <option>+44</option>
+                    </select>
+                    <input type="text" class="form-control" placeholder="345 567-23-56" />
                   </div>
-                  <input placeholder="e.g. Stephen King" type="text" id="name" name="name" class="name">
+                </div>
+                <!-- SMS Code -->
+                <div class="mb-3">
+                  <label class="form-label mb-3">Code from SMS</label>
+                  <div class="d-flex gap-3 w-45">
+                    <input type="text" maxlength="1" class="form-control text-center code-box" placeholder="1" />
+                    <input type="text" maxlength="1" class="form-control text-center code-box" placeholder="2" />
+                    <input type="text" maxlength="1" class="form-control text-center code-box" placeholder="3" />
+                    <input type="text" maxlength="1" class="form-control text-center code-box" placeholder="4" />
+                  </div>
                 </div>
 
-                <div class="fieldParent">
-                  <div class="labelErrorParent">
-                    <label for="email">Email Address</label>
-                    <p class="error"></p>
-                  </div>
-                  <input placeholder="e.g. stephenking@lorem.com" type="email" id="email" name="email" class="email">
+                <!-- Info Message -->
+                <div class="infomessage">
+                  <i class="bi bi-info-circle-fill me-2"></i>
+                  SMS was sent to your number <span>
+                    +1 345 673-56-67
+                  </span>
+                  It will be valid for <span>
+                    01:25
+                  </span>
+
                 </div>
 
-                <div class="fieldParent">
-                  <div class="labelErrorParent">
-                    <label for="number">Phone Number</label>
-                    <p class="error"></p>
-                  </div>
-                  <input placeholder="e.g. +1 234 567 890" type="text" id="number" name="number" class="number">
+                <!-- Email -->
+                <div class="mb-4">
+                  <label for="email" class="form-label mb-3">Email Address</label>
+                  <input type="email" class="form-control" placeholder="youremail@gmail.com" />
                 </div>
+                <!-- Password -->
+                <div class="mb-4">
+                  <label for="password" class="form-label mb-3">Create Password</label>
+                  <div class="input-group">
+                    <input type="password" class="form-control pass" value="12345678" id="password" />
+                    <span class="input-group-text" id="togglePassword" style="cursor: pointer;">
+                      <i class="bi bi-eye" id="eyeIcon"></i>
+                    </span>
+                  </div>
+                </div>
+
               </div>
+
 
             </div>
 
@@ -96,50 +125,41 @@
               <div>
                 <span class="spanstep">Step 2/4</span>
 
-                <p class="personal">Select your plan</p>
-                <p class="personalInfo">You have the option of monthly or yearly billing.</p>
+                <p class="personal">Tell about yourself</p>
               </div>
+              <div class="yourself text-start">
+                <div class="form-group">
+                  <label for="service-use" class="form-label">Why will you use the service?</label>
+                  <select id="service-use" class="form-select">
+                    <option>Work</option>
+                    <option>Personal</option>
+                    <option>Other</option>
+                  </select>
+                </div>
 
-              <p class="planError">Please Select any Plan</p>
+                <div class="form-group">
+                  <label for="user-description" class="form-label">What describes you best?</label>
+                  <select id="user-description" class="form-select">
+                    <option>Business Owner</option>
+                    <option>Freelancer</option>
+                    <option>Student</option>
+                  </select>
+                </div>
 
-              <div class="planParent">
-
-                <div class="plan">
-                  <img src="assets/images/icon-arcade.svg" alt="">
-                  <div class="innerPlan">
-                    <p class="planTitle">Arcade</p>
-                    <p class="price" data-price="9">$9/mo</p>
-                    <p class="hide blue">2 months free</p>
+                <div class="form-group d-flex align-items-center justify-content-between ">
+                  <label class="form-label mb-0">What describes you best?</label>
+                  <div class="form-check-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="best-describes" id="yes" checked>
+                      <label class="form-check-label" for="yes">Yes</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="best-describes" id="no">
+                      <label class="form-check-label" for="no">No</label>
+                    </div>
                   </div>
                 </div>
 
-                <div class="plan">
-                  <img src="assets/images/icon-advanced.svg" alt="">
-                  <div class="innerPlan">
-                    <p class="planTitle">Advanced</p>
-                    <p class="price" data-price="12">$12/mo</p>
-                    <p class="hide blue">2 months free</p>
-                  </div>
-                </div>
-
-                <div class="plan">
-                  <img src="assets/images/icon-pro.svg" alt="">
-                  <div class="innerPlan">
-                    <p class="planTitle">Pro</p>
-                    <p class="price" data-price="15">$15/mo</p>
-                    <p class="hide blue">2 months free</p>
-                  </div>
-                </div>
-
-              </div>
-
-              <div class="planTypeParent">
-                <p class="switchType activeType">Monthly</p>
-                <label class="switch">
-                  <input type="checkbox" class="pricePlanSlider">
-                  <span class="slider round"></span>
-                </label>
-                <p class="switchType">Yearly</p>
               </div>
 
             </div>
@@ -153,43 +173,36 @@
               <div>
                 <span class="spanstep">Step 3/4</span>
 
-                <p class="personal">Pick add-ons</p>
-                <p class="personalInfo">Add-ons help enhance your gaming experience.</p>
+                <p class="personal">Tell about your company</p>
               </div>
-
-              <div class="checkBoxesParent">
-
-                <div class="checkBoxContainer">
-                  <div class="checkBoxInfo">
-                    <input type="checkbox" class="addon" value="1" id="first">
-                    <div class="about">
-                      <label for="first" class="addTitle">Online service</label>
-                      <p class="random">Access to multiplayer games</p>
-                    </div>
-                  </div>
-                  <p data-price="1" class="addOnPrice">+$1/mo</p>
+              <div class="company text-start">
+                <div class="form-group mb-3">
+                  <label for="company-name" class="form-label">Your Company's Name</label>
+                  <input type="text" id="company-name" class="form-control" placeholder="Company's Name" />
                 </div>
 
-                <div class="checkBoxContainer">
-                  <div class="checkBoxInfo">
-                    <input type="checkbox" class="addon" value="2" id="second">
-                    <div class="about">
-                      <label for="second" class="addTitle">Large Storage</label>
-                      <p class="random">Extra 1TB of cloud save</p>
-                    </div>
-                  </div>
-                  <p data-price="2" class="addOnPrice">+$2/mo</p>
+                <div class="form-group">
+                  <label for="business-direction" class="form-label">Business Direction</label>
+                  <select id="business-direction" class="form-select">
+                    <option>IT and programming</option>
+                    <option>Marketing</option>
+                    <option>Finance</option>
+                    <option>Education</option>
+                  </select>
                 </div>
 
-                <div class="checkBoxContainer">
-                  <div class="checkBoxInfo">
-                    <input type="checkbox" class="addon" value="3" id="third">
-                    <div class="about">
-                      <label for="third" class="addTitle">Customizable profile</label>
-                      <p class="random">Custom theme on your profile</p>
-                    </div>
+                <div class="form-group">
+                  <label class="form-label">How many people in your team?</label>
+                  <div class="team-size-grid">
+                    <button type="button" class="team-btn">Only me</button>
+                    <button type="button" class="team-btn">2 - 5</button>
+                    <button type="button" class="team-btn">6 - 10</button>
+                    <button type="button" class="team-btn">11 - 20</button>
+                    <button type="button" class="team-btn">21 - 40</button>
+                    <button type="button" class="team-btn active">41 - 50</button>
+                    <button type="button" class="team-btn">51 - 100</button>
+                    <button type="button" class="team-btn">101 - 500</button>
                   </div>
-                  <p data-price="2" class="addOnPrice">+$2/mo</p>
                 </div>
 
               </div>
@@ -205,32 +218,23 @@
               <div>
                 <span class="spanstep">Step 4/4</span>
 
-                <p class="personal">Finishing up</p>
-                <p class="personalInfo">Double-check everything looks ok before confirming.</p>
+                <p class="personal">Invite Team Members</p>
               </div>
-
-              <div class="billingContainer">
-
-                <div class="billingParent">
-
-                  <div class="planInfo">
-                    <div class="selectedPlanParent">
-                      <p class="selectedPlan"></p>
-                      <p class="changeLink">Change</p>
-                    </div>
-                    <p class="selectedPlanBill"></p>
-                  </div>
-
-                  <div class="dynamicData">
-
-                  </div>
-
+              <div class="member-email-section text-start">
+                <div class="mb-3">
+                  <label for="memberEmail" class="form-label ">Member’s Email</label>
+                  <input type="email" class="form-control email-input" id="memberEmail"
+                    placeholder="memberemail@gmail.com" />
                 </div>
 
-                <div class="totalBill">
-                  <p class="adTitle"></p>
-                  <p class="finalPrice"></p>
+                <div class="add-member" id="emailInputs">
+                  <a href="#" id="addMemberBtn"
+                    class="text-primary text-decoration-none d-inline-flex align-items-center mb-3">
+                    <i class="bi bi-plus-lg me-2"></i>
+                    Add another Member
+                  </a>
                 </div>
+
               </div>
 
             </div>
@@ -245,7 +249,7 @@
                 <img src="/assets/images/Illustration.png" alt="">
                 <p class="thankyou">You are successfully registered!</p>
                 <button class="start">Let's Start
-            <img src="/assets/images/arrow.png" alt="arrow">
+                  <img src="/assets/images/arrow.png" alt="arrow">
 
                 </button>
               </div>
@@ -260,7 +264,8 @@
         <div class="btnWrapper">
           <p class="prev hideBtn" data-step="1">
             <img src="/assets/images/blue.png" alt="arrow">
-            Previous</p>
+            Previous
+          </p>
           <button class="next" data-step="1">Next Step
             <img src="/assets/images/arrow.png" alt="arrow">
           </button>
@@ -270,6 +275,7 @@
 
     </div>
   </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.js"></script>
   <script src="./package/bootstrap.min.js"></script>
   <script type="module" src="/main.js"></script>
 </body>

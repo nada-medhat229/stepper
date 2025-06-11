@@ -1,37 +1,170 @@
 .rightSectionParent {
+  box-shadow: 0px 6px 58px 0px #C4CBD61A;
+  padding: 10px;
+  border-radius: 24px;
+  width: 65%;
+  margin: 0 100px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex: 1;
 
   .rightSectionWrapper {
-    margin-top: 32px;
-    width: 75%;
+    width: 43%;
+    padding: 0 20px;
     align-self: center;
+    margin: 32px auto;
 
     .formContainer {
       display: flex;
       flex-direction: column;
       gap: 16px;
       text-align: center;
-      &.hide{
-  display: none;
+
+      &.hide {
+        display: none;
       }
+
       .mainForm {
         display: flex;
         flex-direction: column;
         gap: 24px;
-.personal {
-     font-size: 22px;
-    font-weight: 700;
-}
+
+        .personal {
+          font-size: 22px;
+          font-weight: 700;
+        }
 
         .spanstep {
           color: $primary;
-          text-transform: capitalize;
+          text-transform: uppercase;
+          font-size: 14px;
+
         }
       }
+
+      .form-label {
+        color: $color-text-mute ;
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .infomessage {
+        color: $primary;
+        padding: 40px 35px;
+      }
+
+      .form-group {
+        margin-bottom: 24px;
+
+        .form-select {
+          width: 100%;
+          padding: 10px 16px;
+          color: $color-text-mute;
+          font-size: 1rem;
+        }
+      }
+
+      .form-check-group {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        margin-top: 8px;
+
+        .form-check {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+
+          .form-check-input {
+            width: 20px;
+            height: 20px;
+            border: 2px solid $black-color;
+            accent-color: $white; // Bootstrap primary
+          }
+
+          .form-check-input:checked[type=radio] {
+            background-image: url(../images/circle.png);
+            background-size: 12px;
+          }
+
+          .form-check-input:checked {
+            background-color: $white;
+          }
+
+        }
+      }
+
+
+      .team-size-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 12px;
+        margin-top: 12px;
+      }
+
+      .team-btn {
+        padding: 10px 14px;
+        font-size: 14px;
+        border: $main-border;
+        border-radius: 10px;
+        color: $color-text-mute;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover {
+          border-color: $primary;
+        }
+
+        &.active {
+          background-color: $primary;
+          color: $white;
+          font-weight: 500;
+        }
+      }
+
+      .member-email-section {
+        .email-input {
+          border-radius: 14px;
+        }
+
+        .add-member {
+          margin-top: 1rem;
+
+          a {
+            font-weight: 500;
+            font-size: 16px;
+
+            i {
+              font-size: 1rem;
+            }
+
+
+          }
+        }
+      }
+
     }
   }
 
+}
+
+.stepper-form {
+  .code-box {
+    width: 50px;
+    height: 50px;
+    font-size: 1.25rem;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+  }
+
+  .alert {
+    background-color: #f0f8ff;
+    border-left: 4px solid #0d6efd;
+  }
+
+  .input-group-text {
+    background-color: white;
+    border-left: 0;
+    cursor: pointer;
+  }
 }

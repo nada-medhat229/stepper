@@ -42,7 +42,14 @@
         background: $white;
       }
     }
-
+ &.done {
+    background: $white;
+    color: $primary; // or your brand color
+    font-weight: bold;
+    &::after {
+        background: $white;
+      }
+  }
   }
 }
 
