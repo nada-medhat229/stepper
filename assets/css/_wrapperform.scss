@@ -2,14 +2,14 @@
   box-shadow: 0px 6px 58px 0px #C4CBD61A;
   padding: 10px;
   border-radius: 24px;
-  width: 65%;
+  width: 80%;
   margin: 0 100px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
+  background-color: $white;
   .rightSectionWrapper {
-    width: 43%;
+    width: 40%;
     padding: 0 20px;
     align-self: center;
     margin: 32px auto;
@@ -50,7 +50,10 @@
 
       .infomessage {
         color: $primary;
-        padding: 40px 35px;
+    padding: 30px 35px;
+    background: #F4F9FD;
+    border-radius: 14px;
+    margin-bottom: 20px;
       }
 
       .form-group {
@@ -108,6 +111,7 @@
         border: $main-border;
         border-radius: 10px;
         color: $color-text-mute;
+        background: transparent;
         cursor: pointer;
         transition: all 0.2s ease;
 

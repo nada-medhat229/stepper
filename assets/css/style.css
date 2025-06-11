@@ -28,6 +28,8 @@
   align-self: center;
   justify-content: space-between;
   padding-bottom: 16px;
+  border-top: 1px solid #E4E6E8;
+  padding-top: 30px;
 }
 
 .prev {
@@ -41,7 +43,7 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
-  width: 18%;
+  width: 19%;
   padding: 70px 40px;
   background: #3F8CFF;
   border-radius: 24px;
@@ -117,14 +119,15 @@
   box-shadow: 0px 6px 58px 0px rgba(196, 203, 214, 0.1019607843);
   padding: 10px;
   border-radius: 24px;
-  width: 65%;
+  width: 80%;
   margin: 0 100px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: #fff;
 }
 .rightSectionParent .rightSectionWrapper {
-  width: 43%;
+  width: 40%;
   padding: 0 20px;
   align-self: center;
   margin: 32px auto;
@@ -159,7 +162,10 @@
 }
 .rightSectionParent .rightSectionWrapper .formContainer .infomessage {
   color: #3F8CFF;
-  padding: 40px 35px;
+  padding: 30px 35px;
+  background: #F4F9FD;
+  border-radius: 14px;
+  margin-bottom: 20px;
 }
 .rightSectionParent .rightSectionWrapper .formContainer .form-group {
   margin-bottom: 24px;
@@ -206,6 +212,7 @@
   border: 1px solid #D8E0F0;
   border-radius: 10px;
   color: #7D8592;
+  background: transparent;
   cursor: pointer;
   transition: all 0.2s ease;
 }
@@ -276,6 +283,7 @@ body,
 html {
   overflow-x: hidden;
   line-height: 24px;
+  background-color: #F4F9FD;
 }
 
 .form-select:focus,
@@ -290,6 +298,7 @@ html {
   border-radius: 14px;
   padding: 10px;
   border: 1px solid #D8E0F0;
+  box-shadow: 0px 1px 2px 0px rgba(184, 200, 224, 0.2235294118);
 }
 
 .input-group-text {
@@ -308,10 +317,10 @@ html {
   display: flex;
   flex-direction: row;
   border-radius: 14px;
-  padding: 12px;
-  background-color: #fff;
+  padding: 12px 30px;
+  background-color: #F4F9FD;
   margin-top: 20px;
-  height: 90vh;
+  height: 100vh;
 }
 
 .formParentWrapper[data-step="5"] .rightSectionParent {
