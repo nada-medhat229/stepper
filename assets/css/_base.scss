@@ -29,7 +29,10 @@ html {
     background-color: #F4F9FD;
 
 }
+main{
+  height: 100vh;
 
+}
 .form-select:focus,
 .form-control:focus {
   box-shadow: none
@@ -54,22 +57,23 @@ box-shadow: 0px 1px 2px 0px #B8C8E039;
   width: 53%;
 }
 .formParentWrapper {
-  display: flex;
+ display: flex;
   flex-direction: row;
   justify-content: space-between;
   border-radius: 14px;
-  padding: 0 15px;
+  padding: 15px;
   background-color: #F4F9FD;
-  margin-top: 20px;
-  height: 96vh;
+  overflow: hidden; // Prevent content overflow from stretching it
+  height: 100%;
 }
+
 .formParentWrapper[data-step="5"] {
   .rightSectionParent {
     width: 100% !important;
     margin: 0 !important;
-
     .rightSectionWrapper {
       width: 100% !important;
+      
     }
   }
 }
