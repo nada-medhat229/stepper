@@ -319,7 +319,7 @@ html {
   padding: 0 15px;
   background-color: #F4F9FD;
   margin-top: 20px;
-  height: 100vh;
+  height: 96vh;
 }
 
 .formParentWrapper[data-step="5"] .rightSectionParent {
@@ -351,10 +351,10 @@ html {
 
 /*Thank you*/
 .thankContainer {
-  min-height: 300px;
+  height: 90vh;
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
 }
 .thankContainer .thankParent {
